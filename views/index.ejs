@@ -71,52 +71,39 @@
       </div>
     </div>
   </div>
-  <!-- Formulario de registro -->
-  <div class="container mt-1">
-    <div class="row justify-content-center">
-      <div class="col-md-5">
-        <form id="registerForm" class="d-none my-4 border rounded needs-validation position-relative" novalidate>
-          <button type="button" class="btn-close position-absolute top-0 end-0 m-3" aria-label="Close" onclick="toggleForm('registerForm')"></button>
-          <div class="mb-3">
-            <label for="firstName" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="firstName" required>
-            <div class="invalid-feedback">
-              Por favor, ingresa tu nombre.
-            </div>
+ <!-- Formulario de registro -->
+<div class="container mt-1">
+  <div class="row justify-content-center">
+    <div class="col-md-5">
+      <form id="registerForm" class="d-none my-4 border rounded needs-validation position-relative" novalidate method="POST" action="/register">
+        <button type="button" class="btn-close position-absolute top-0 end-0 m-3" aria-label="Close" onclick="toggleForm('registerForm')"></button>
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" name="nombre" required>
+          <div class="invalid-feedback">
+            Por favor, ingresa tu nombre.
           </div>
-          <div class="mb-3">
-            <label for="lastName" class="form-label">Apellido</label>
-            <input type="text" class="form-control" id="lastName" required>
-            <div class="invalid-feedback">
-              Por favor, ingresa tu apellido.
-            </div>
+        </div>
+        <div class="mb-3">
+          <label for="correo_electronico" class="form-label">Correo Electrónico</label>
+          <input type="email" class="form-control" id="correo_electronico" name="correo_electronico" required>
+          <div class="invalid-feedback">
+            Por favor, ingresa un correo electrónico válido.
           </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Correo Electrónico</label>
-            <input type="email" class="form-control" id="email" required>
-            <div class="invalid-feedback">
-              Por favor, ingresa un correo electrónico válido.
-            </div>
+        </div>
+        <div class="mb-3">
+          <label for="contrasena" class="form-label">Contraseña</label>
+          <input type="password" class="form-control" id="contrasena" name="contrasena" required>
+          <div class="invalid-feedback">
+            Por favor, ingresa una contraseña.
           </div>
-          <div class="mb-3">
-            <label for="phone" class="form-label">Número de Teléfono</label>
-            <input type="tel" class="form-control" id="phone" required>
-            <div class="invalid-feedback">
-              Por favor, ingresa un número de teléfono válido.
-            </div>
-          </div>
-          <div class="mb-3">
-            <label for="password" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" id="password" required>
-            <div class="invalid-feedback">
-              Por favor, ingresa una contraseña.
-            </div>
-          </div>
-          <button type="submit" class="btn btn-primary">Crear cuenta</button>
-        </form>
-      </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Crear cuenta</button>
+      </form>
     </div>
   </div>
+</div>
+
   <!--Tarjetas-->
   <div class="container mt-1 p-4">
     <div class="row">

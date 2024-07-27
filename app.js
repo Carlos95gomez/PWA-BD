@@ -34,7 +34,21 @@ app.get('/:page', (req, res) => {
     }
 });
 
+// Ruta para manejar el registro de usuarios
+app.post('/register', (req, res) => {
+    const { nombre, correo_electronico, contrasena } = req.body;
+
+    if (!nombre || !correo_electronico || !contrasena) {
+        return res.status(400).send('Faltan campos');
+    }
+
+    const query = 'INSERT INTO usuarios (nombre, correo_electronico, contrasena, rol) VALUES (?, ?, ?, ?)';
+    conexiondb.query(query, [nombre, correo_electronico, contrasena, 'normal'], (err, result) => {
+        if (err) throw err;
+        res.send('Usuario registrado exitosamente');
+    });
+});
+
 app.listen(4000, function () {
     console.log('http://localhost:4000');
 });
-
