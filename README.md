@@ -5,20 +5,32 @@ incluye los formularios de inicio de sesión, registro y recuperación de contra
 
 
 Tecnologías utilizadas:
+
 - HTML
-- CSS
-- JavaScript
 - EJS
-- Node.js
-- Express
-- MySQL
+
+- CSS
 - Bootstrap
+
+- JavaScript
+- Node.js
+- Nodemon
+- Express
+
+- MySQL
+- XAMPP
+
 
 Instrucciones
 
-paso 1- iniciar mysql en xamp 3306
-paso 2- Inicia el servidor con Node.js ejecutando `node app.js` en el terminal.
+paso 1- Abrir xamp start mysql puerto 3306
+paso 2- si acaba de clonar abrir el proyecto, en la terminal de vsc dar npm install 
+paso 3- en el terminal dar nodemon app.js conectara a la bd e Iniciara el servidor con Node.js.
 paso 3- abrir http://localhost:4000 en el navegador
-paso 4- navegar libremente
+paso 4- ya podra ver la pagina web, crear usuarios con rol'normal' por defecto y se redirigira a la pagina 'extra'
+    para ir a la pagina 'admin' se debe crear un usuario con rol admin desde la base de datos.
+    o se puede acceder a traves de http://localhost:4000/admin y desde alli se podra hacer el crud de los predios
+    crear un predio, leer los predios en la bd, actualizar los predios y eliminarlos.
 
-se trabaja en conexion a db para registrar usuarios...
+
+
